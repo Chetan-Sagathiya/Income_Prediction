@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="icon" href="{{ url_for('static', filename='icon.png') }}">
+
+    <title>Income Predictor!</title>
+  </head>
+
+  <body style="background: #3AAFA9;">
+    <h1 class="text-center mt-5">Income Prediction!</h1>
+
+    <form class="container mt-5 mt-5" action="{{ url_for('predict')}}" method="post" >
+	  	<div class="form-row">
+		    <div class="col-4">
+		      <input type="number" class="form-control" placeholder="Age" name="age" required>
+		    </div>
+		    <select class="custom-select col-4" name="FormEducationSelect" required>
+	      		<option value="" disabled selected>Education</option>
+		        <option value="0">Preschool</option>
+		        <option value="1">1st-4th</option>
+		        <option value="2">5th-6th</option>
+		        <option value="3">7th-8th</option>
+		        <option value="4">9th</option>
+		        <option value="5">10th</option>
+		        <option value="6">11th</option>
+		        <option value="7">12th</option>
+		        <option value="8">HS-grad</option>
+		        <option value="9">Prof-school</option>
+		        <option value="10">Assoc-acdm</option>
+		        <option value="11">Assoc-voc</option>
+		        <option value="12">Some-college</option>
+		        <option value="13">Bachelors</option>
+		        <option value="14">Masters</option>
+		        <option value="15">Doctorate</option>
+	      	</select>
+	      	<div class="col-md-4">
+		      <input type="number" class="form-control" placeholder="Education Years" 
+		      						name="education_num" required>
+		    </div>
+	 	</div>
+
+	  	<div class="form-row mt-5">
+		  	<div class="col-md-4">
+		      	<input type="number" class="form-control" placeholder="Hours Per Week" 
+		      							name="hours_per_week" required>
+			</div>
+			<select class="custom-select col-4" name="FormWorkCLassSelect" required>
+		        <option value="" disabled selected>WorkClass</option>
+		        <option value="0">Local Government</option>
+		        <option value="1">Private</option>
+		        <option value="2">Self Emp. Inc.</option>
+		        <option value="3">Self Emp. Not Inc.</option>
+		        <option value="4">State Government</option>
+		        <option value="5">Without Pay</option>
+		        <option value="6">Federal Government</option>
+	      	</select>
+		    <select class="custom-select col-md-4" name="FormMartialStatusSelect" required>
+		        <option value="" disabled selected>Martial Status</option>
+		        <option value="0">Married Armed Force Spouse</option>
+		        <option value="1">Married Civilian Spouse</option>
+		        <option value="2">Married Spouse Absent</option>
+		        <option value="3">Never Married</option>
+		        <option value="4">Separated</option>
+		        <option value="5">Widowed</option>
+		        <option value="6">Divorced</option>
+	      	</select>
+      	</div>
+
+      	<div class="form-row mt-5">
+		  	<select class="custom-select col-md-4" name="FormOccupationSelect" required>
+		        <option value="" disabled selected>Occupation</option>
+		        <option value="0">Armed-Forces</option>
+		        <option value="1">Craft-Repair </option>
+		        <option value="2">Exec-managerial</option>
+		        <option value="3">Farming-Fishing</option>
+		        <option value="4">Handlers-cleaners </option>
+		        <option value="5">Machine-op-Inspector</option>
+		        <option value="6">Other-service</option>
+		        <option value="7">Private-House-Service</option>
+		        <option value="8">Prof-specialty</option>
+		        <option value="9">Protective-service</option>
+		        <option value="10">Sales</option>
+		        <option value="11">Tech-support</option>
+		        <option value="12">Transport-Moving</option>
+		        <option value="13">Admin-clerical</option>
+		  	</select>
+	  		<select class="custom-select col-md-4" name="FormRelationSelect" required>
+		        <option value="" disabled selected>Relationship</option>
+		        <option value="0">Not-in-family</option>
+		        <option value="1">Other-relative</option>
+		        <option value="2">Own-child </option>
+		        <option value="3">Unmarried</option>
+		        <option value="4">Wife</option>
+		        <option value="5"> Husband</option>
+	      	</select>
+	      	<select class="custom-select col-md-4" name="FormGenderSelect" required>
+		        <option value="" disabled selected>Gender</option>
+		        <option value="0">Male</option>
+		        <option value="1">Female</option>
+	      	</select>
+      	</div>
+      		<br/>
+		    {% if prediction %}
+				<center> <a class="btn btn-primary" href="/" role="button">Home</a> </center>
+			{% else %}
+			<center>
+				<button type="submit" class="btn btn-primary"> Predict </button>
+		    </center>
+		    {% endif %}
+
+	</form>
+
+	<br/> <center> <h2 style="color: blue"> {{ prediction }} </h2> </center>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
