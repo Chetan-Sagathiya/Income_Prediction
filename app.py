@@ -39,7 +39,7 @@ def predict():
 			prediction = 'Your Salary Will be LESS than 50K as per Statistics'
 		else:
 			prediction = 'Your Salary Will be MORE than 50K as per Statistics'
-		return render_template('index.html', prediction=prediction)
+		return render_template('result.html', prediction=prediction)
 
 if __name__ == "__main__":
 	app.run(debug=True)
