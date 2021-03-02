@@ -3,7 +3,7 @@ Predicting If Income of the User Will be MORE Or LESS then $50k.
 
 ## Home Page:
 
-![image-1](https://user-images.githubusercontent.com/78957536/109657010-06d19080-7b8b-11eb-9630-f9628f8c245f.png)
+![image-1](https://user-images.githubusercontent.com/78957536/109657144-2c5e9a00-7b8b-11eb-9956-fbb6abac7dad.png)
 
 ## Submitting Details:
 
@@ -15,4 +15,4 @@ Predicting If Income of the User Will be MORE Or LESS then $50k.
 
 ## Clicking Home Button 
 
-![image-1](https://user-images.githubusercontent.com/78957536/109657010-06d19080-7b8b-11eb-9630-f9628f8c245f.png)
+![image-1](https://user-images.githubusercontent.com/78957536/109657144-2c5e9a00-7b8b-11eb-9956-fbb6abac7dad.png)
