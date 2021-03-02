@@ -7,7 +7,7 @@ Predicting If Income of the User Will be MORE Or LESS then $50k.
 
 ## Submitting Details:
 
-![image-2](https://user-images.githubusercontent.com/78957536/109656196-2caa6580-7b8a-11eb-9faf-e5744c982077.png)
+![image-2](https://user-images.githubusercontent.com/78957536/109657492-9119f480-7b8b-11eb-870b-03d1db8aa064.png)
 
 ## Final Prediction on Result Page:
 
