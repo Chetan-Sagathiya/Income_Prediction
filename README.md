@@ -11,7 +11,7 @@ Predicting If Income of the User Will be MORE Or LESS then $50k.
 
 ## Final Prediction on Result Page:
 
-![image-3](https://user-images.githubusercontent.com/78957536/109656283-477cda00-7b8a-11eb-82c7-7f7828317d00.png)
+![image-3](https://user-images.githubusercontent.com/78957536/109656602-9aef2800-7b8a-11eb-86ed-88aa3abc5101.png)
 
 ## Clicking Home Button 
 
