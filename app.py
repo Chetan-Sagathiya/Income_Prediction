@@ -4,7 +4,7 @@ import pickle
 
 app = Flask(__name__)
 
-model = pickle.load(open("Income_Model_Random_Forest.pkl", "rb"))
+model = pickle.load(open("xgboost.pkl", "rb"))
 
 @app.route('/')
 def home():
